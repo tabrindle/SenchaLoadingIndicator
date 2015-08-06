@@ -31,7 +31,14 @@ Ext.define('Ext.ux.LoadingIndicator', {
          * Also available: bubbles, circles, crescent, dots, lines, ripple, spiral
          * @accessor
          */
-        name:  Ext.os.is.android ? 'android' : 'ios'
+        name:  Ext.os.is.android ? 'android' : 'ios',
+
+        /**
+         * @cfg {String} duration
+         * Integer (best is between 500ms and 1000ms) - must end in ms or s
+         * @accessor
+         */
+        duration: '750ms'
     },
 
     template: [
@@ -71,7 +78,7 @@ Ext.define('Ext.ux.LoadingIndicator', {
             an: 'transform',
             type: 'rotate',
             rc: 'indefinite',
-            dur: '750ms'
+            dur: scope.getDuration()
         };
 
         scope.spinners = {
@@ -100,7 +107,7 @@ Ext.define('Ext.ux.LoadingIndicator', {
                                 fn: function() {
                                     return {
                                         an: 'stroke-opacity',
-                                        dur: '750ms',
+                                        dur: scope.getDuration(),
                                         v: scope.animationValues('0;.1;.15;.25;.35;.45;.55;.65;.7;.85;1', i),
                                         rc: 'indefinite'
                                     };
@@ -125,7 +132,7 @@ Ext.define('Ext.ux.LoadingIndicator', {
                                 fn: function() {
                                     return {
                                         an: 'r',
-                                        dur: '750ms',
+                                        dur: scope.getDuration(),
                                         v: scope.animationValues('1;2;3;4;5;6;7;8', i),
                                         rc: 'indefinite'
                                     };
@@ -151,7 +158,7 @@ Ext.define('Ext.ux.LoadingIndicator', {
                                 fn: function() {
                                     return {
                                         an: 'fill-opacity',
-                                        dur: '750ms',
+                                        dur: scope.getDuration(),
                                         v: scope.animationValues('.3;.3;.3;.4;.7;.85;.9;1', i),
                                         rc: 'indefinite'
                                     };
@@ -188,7 +195,7 @@ Ext.define('Ext.ux.LoadingIndicator', {
                                 fn: function() {
                                     return {
                                         an: 'fill-opacity',
-                                        dur: '750ms',
+                                        dur: scope.getDuration(),
                                         v: scope.animationValues('.5;.6;.8;1;.8;.6;.5', i),
                                         rc: 'indefinite'
                                     };
@@ -198,7 +205,7 @@ Ext.define('Ext.ux.LoadingIndicator', {
                                 fn: function() {
                                     return {
                                         an: 'r',
-                                        dur: '750ms',
+                                        dur: scope.getDuration(),
                                         v: scope.animationValues('4;5;6;5;4;3;3', i),
                                         rc: 'indefinite'
                                     };
@@ -223,7 +230,7 @@ Ext.define('Ext.ux.LoadingIndicator', {
                                 fn: function() {
                                     return {
                                         an: 'y1',
-                                        dur: '750ms',
+                                        dur: scope.getDuration(),
                                         v: scope.animationValues('16;18;28;18;16', i),
                                         rc: 'indefinite'
                                     };
@@ -233,7 +240,7 @@ Ext.define('Ext.ux.LoadingIndicator', {
                                 fn: function() {
                                     return {
                                         an: 'y2',
-                                        dur: '750ms',
+                                        dur: scope.getDuration(),
                                         v: scope.animationValues('48;44;36;46;48', i),
                                         rc: 'indefinite'
                                     };
@@ -243,7 +250,7 @@ Ext.define('Ext.ux.LoadingIndicator', {
                                 fn: function() {
                                     return {
                                         an: 'stroke-opacity',
-                                        dur: '750ms',
+                                        dur: scope.getDuration(),
                                         v: scope.animationValues('1;.8;.5;.4;1', i),
                                         rc: 'indefinite'
                                     };
