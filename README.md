@@ -1,6 +1,6 @@
 # Sencha Loading Indicator
 
-Thanks to Ionic's generous license, the same loading indicators available to you in the Ionic framework is now available to Sencha users.
+Thanks to Ionic's generous license, the same loading indicators available to you in the [Ionic framework](https://github.com/driftyco/ionic) is now available to Sencha users.
 
 [Demo - Sencha Fiddle](https://fiddle.sencha.com/#fiddle/rp5)
 
