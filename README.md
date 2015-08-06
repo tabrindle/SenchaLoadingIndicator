@@ -2,6 +2,8 @@
 
 Thanks to Ionic's generous license, the same loading indicators available to you in the Ionic framework is now available to Sencha users.
 
+[Demo - Sencha Fiddle](https://fiddle.sencha.com/#fiddle/rp5)
+
 ## Installation:
 
 - Copy LoadingIndicator.js to app/ux/LoadingIndicator.js
