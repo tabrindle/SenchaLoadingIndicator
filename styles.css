@@ -1,0 +1,41 @@
+.spinner {
+    stroke: $base-color;
+    fill: $base-color;
+}
+
+.spinner svg {
+    width: 56px;
+    height: 56px;
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-in-out {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.x-loading-indicator-message {
+    margin: 0.5em;
+    .message-flash {
+        animation: fade-in-out 3s infinite;
+        -webkit-animation: fade-in-out 3s infinite;
+    }
+}
